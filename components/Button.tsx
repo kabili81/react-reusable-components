@@ -1,18 +1,13 @@
 type Props = {
-  handleClick: () => void;
-  handleDobleClick?: () => void;
-  handleMouseEnter?: () => void;
-  text: string;
+
+  children: string;
 };
-export function Button({ handleClick, text, handleDobleClick, handleMouseEnter }) {
+export function Button({children, ...props }: Props) {
+    
   return (
     <button
-      className="button"
-      onClick={handleClick}
-      onDoubleClick={handleDobleClick}
-      onMouseEnter={handleMouseEnter}
-    >
-      {text}
+    className="button" {...props}> 
+      {children}
     </button>
   );
 }

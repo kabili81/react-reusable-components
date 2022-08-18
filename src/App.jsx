@@ -12,23 +12,29 @@ function App() {
       {hungry ? <h1>Dua Ushqim</h1> : <h1>Unë jam mirë</h1>}
 
       <Button
-        text="HANI"
-        handleClick={() => {
+        onClick={() => {
           setHungry(false);
         }}
-        handleDoubleClick={() => {
+        onDoubleClick={() => {
           alert("Si guxon?");
         }}
-      />
+        
+      >
+        HANI
+      </Button>
+
       <Button
-        text="PUNONI"
-        handleClick={() => {
+        onClick={() => {
           setHungry(true);
         }}
-        handleMouseEnter={() => {
-          alert("Mirë se vini")
+        onDoubleClick={() => {
+          alert('Me klikuat dy here!!')
         }}
-      />
+      >
+        PUNONI
+      </Button>
+      
+      
     </div>
   );
 }
